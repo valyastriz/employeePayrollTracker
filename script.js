@@ -12,8 +12,17 @@ while(true) {
   let lastName;
   let inputSalary;
   firstName = window.prompt('Enter Employee First Name:');
+  if (firstName === null) {
+    break;
+  }
   lastName = window.prompt('Enter Employee Last Name:');
+  if (lastName === null) {
+    break;
+  }
   inputSalary = window.prompt('Enter Employee Salary:');
+  //gotta check if it's actually a number
+  //maybe convert to a decimal number if needed?
+}
 }
   // TODO: Get user input to create and return an array of employee objects
 
