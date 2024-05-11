@@ -32,15 +32,16 @@ while(true) {
   //maybe convert to a number from a string
   salary = parseFloat(inputSalary);
   // need to add the variables into and object to store the info
-  employee = {
+  employees = {
     firstName : firstName,
     lastName : lastName,
     salary : salary
   };
 
-  //he array and pass them back
+  // pass back the value in the array
   
 }
+return employees;
 }
   // TODO: Get user input to create and return an array of employee objects
 
