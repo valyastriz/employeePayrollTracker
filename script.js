@@ -7,6 +7,7 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 function collectEmployees() {
   //while loop to prompt for input
 while(true) {
+  employees = [];
   //create variables for the inputs
   let firstName;
   let lastName;
@@ -22,6 +23,7 @@ while(true) {
   inputSalary = window.prompt('Enter Employee Salary:');
   //gotta check if it's actually a number
   //maybe convert to a decimal number if needed?
+  // need to add the variables into the array and pass them back
 }
 }
   // TODO: Get user input to create and return an array of employee objects
