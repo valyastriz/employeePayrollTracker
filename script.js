@@ -1,18 +1,19 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-
+let employees = [];
+function collectEmployees() {
+//create empty array for entries
 
 
 // Collect employee data
-function collectEmployees() {
-  //create empty array for entries
-  let employees = [];
+
   //while loop to prompt for input continuously
 while(true) {
   //create variables for the inputs
   let firstName;
   let lastName;
   let inputSalary;
+  // TODO: Get user input to create and return an array of employee objects
   //prompt for first name and break out if cancel
   firstName = window.prompt('Enter Employee First Name:');
   if (firstName === null) {
@@ -34,22 +35,31 @@ while(true) {
   else {
     salary = parseFloat(inputSalary);
   }
-  // need to add the variables into and object to store the info
+  //add the variables into array for objects to store the employee info
   employees.push({
     firstName : firstName,
     lastName : lastName,
     salary : salary
-  })
-  // pass back the value in the array
-  
+  })  
 }
+  // pass back the value in the array
 return employees;
-
 };
 
-
-  // TODO: Get user input to create and return an array of employee objects
-
+//convert first names to lowercase, alphebatize and covert the first letter back to uppercase
+employees.sort((a, b) => {
+  //convert to lower
+  const nameA = a.firstName.toLowerCase();
+  const nameB = b.firstName.toLowerCase();
+  //aphebatize
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return ;
+  return 0;
+});
+//convert back to first letter being uppercase
+employees.foreach(employee => {
+  employee.firstName = employee.firstName.charAt(0).toUpperase() + employee.firstName.slice(1);
+})
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
