@@ -25,11 +25,21 @@ while(true) {
   //prompt for salary but need to convert from string to number
   inputSalary = window.prompt('Enter Employee Salary:');
   //checking if cancelled of non number entered and assigning value to zero
+  let salary;
   if (inputSalary === null || inputSalary.isNan) {
-    let salary = 0;
+    salary = 0;
   }
-  //maybe convert to a decimal number if needed?
-  // need to add the variables into the array and pass them back
+  //maybe convert to a number from a string
+  salary = parseFloat(inputSalary);
+  // need to add the variables into and object to store the info
+  employee = {
+    firstName : firstName,
+    lastName : lastName,
+    salary : salary
+  };
+
+  //he array and pass them back
+  
 }
 }
   // TODO: Get user input to create and return an array of employee objects
