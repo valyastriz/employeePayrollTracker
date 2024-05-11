@@ -46,26 +46,17 @@ while(true) {
 return employees;
 };
 
-// //convert first name tolowercase
-// employees.forEach(employee => {
-//   employee.firstName = employee.firstName.toLowerCase();
-// })
-
-// //convert first names to lowercase, alphebatize and covert the first letter back to uppercase
-// employees.sort((a, b) => {  
-//   //aphebatize
-//   if (a.firstName < b.firstName) return -1;
-//   if (a.firstName > b.firstName) return ;
-//   return 0;
-// });
-// //convert first letter back to uppercase
-// employees.forEach(employee => {
-//   employee.firstName = employee.firstName.charAt(0).toUpperCase() + employee.firstName.slice(1);
-// })
-
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+  let totalSalary;
+  //calculate the total
+  employeesArray.forEach(employee => {
+    totalSalary += employee.salary;
+  });
+  //calculate the aveage
+  const averageSalary = totalSalary / employeesArray.length;
+  return averageSalary;
 }
 
 // Select a random employee
