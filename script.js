@@ -26,21 +26,21 @@ while(true) {
   inputSalary = window.prompt('Enter Employee Salary:');
   //checking if cancelled of non number entered and assigning value to zero
   let salary;
-  if (inputSalary === null || inputSalary.isNan) {
+  if (inputSalary === null || isNaN(inputSalary)) {
     salary = 0;
   }
   //maybe convert to a number from a string
   salary = parseFloat(inputSalary);
   // need to add the variables into and object to store the info
-  employees = {
-    firstName : firstName,
-    lastName : lastName,
-    salary : salary
-  };
 
   // pass back the value in the array
   
 }
+employees = {
+  firstName : firstName,
+  lastName : lastName,
+  salary : salary
+};
 return employees;
 }
   // TODO: Get user input to create and return an array of employee objects
