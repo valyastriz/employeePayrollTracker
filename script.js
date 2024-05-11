@@ -31,7 +31,9 @@ while(true) {
     salary = 0;
   }
   //maybe convert to a number from a string
-  salary = parseFloat(inputSalary);
+  else {
+    salary = parseFloat(inputSalary);
+  }
   // need to add the variables into and object to store the info
   employees.push({
     firstName : firstName,
