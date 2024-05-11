@@ -5,23 +5,29 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 function collectEmployees() {
-  //while loop to prompt for input
+  //while loop to prompt for input continuously
 while(true) {
   employees = [];
   //create variables for the inputs
   let firstName;
   let lastName;
   let inputSalary;
+  //prompt for first name and break out if cancel
   firstName = window.prompt('Enter Employee First Name:');
   if (firstName === null) {
     break;
   }
+  //prompt for last name and break out if cancel
   lastName = window.prompt('Enter Employee Last Name:');
   if (lastName === null) {
     break;
   }
+  //prompt for salary but need to convert from string to number
   inputSalary = window.prompt('Enter Employee Salary:');
-  //gotta check if it's actually a number
+  //checking if cancelled of non number entered and assigning value to zero
+  if (inputSalary === null || inputSalary.isNan) {
+    let salary = 0;
+  }
   //maybe convert to a decimal number if needed?
   // need to add the variables into the array and pass them back
 }
