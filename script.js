@@ -5,9 +5,10 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 function collectEmployees() {
+  //create empty array for entries
+  let employees = [];
   //while loop to prompt for input continuously
 while(true) {
-  employees = [];
   //create variables for the inputs
   let firstName;
   let lastName;
@@ -32,17 +33,19 @@ while(true) {
   //maybe convert to a number from a string
   salary = parseFloat(inputSalary);
   // need to add the variables into and object to store the info
-
+  employees.push({
+    firstName : firstName,
+    lastName : lastName,
+    salary : salary
+  })
   // pass back the value in the array
   
 }
-employees = {
-  firstName : firstName,
-  lastName : lastName,
-  salary : salary
-};
 return employees;
-}
+
+};
+
+
   // TODO: Get user input to create and return an array of employee objects
 
 
