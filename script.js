@@ -1,6 +1,6 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-let employees = [];
+const employees = [];
 function collectEmployees() {
 //create empty array for entries
 
@@ -46,20 +46,25 @@ while(true) {
 return employees;
 };
 
+//convert first name tolowercase
+employees.forEach(employee => {
+  employee.firstName = employee.firstName.toLowerCase();
+})
+//convert first letter back to uppercase
+employees.forEach(employee => {
+  employee.firstName = employee.firstName.charAt(0).toUpperCase() + employee.firstName.slice(1);
+})
+
 //convert first names to lowercase, alphebatize and covert the first letter back to uppercase
 employees.sort((a, b) => {
   //convert to lower
-  const nameA = a.firstName.toLowerCase();
-  const nameB = b.firstName.toLowerCase();
+  
   //aphebatize
   if (nameA < nameB) return -1;
   if (nameA > nameB) return ;
   return 0;
 });
-//convert back to first letter being uppercase
-employees.foreach(employee => {
-  employee.firstName = employee.firstName.charAt(0).toUpperase() + employee.firstName.slice(1);
-})
+
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
